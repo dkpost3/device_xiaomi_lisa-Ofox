@@ -1,4 +1,4 @@
-#  TWRP Device Tree for Xiaomi 11 Lite NE (LISA)
+#  OrangeFox Device Tree for Xiaomi 11 Lite NE (LISA)
 
 The  Xiaomi 11 Lite NE (LISA) is a High-range smartphone from Xiaomi. 
 ## Device specifications
@@ -29,7 +29,7 @@ The  Xiaomi 11 Lite NE (LISA) is a High-range smartphone from Xiaomi.
 
 ## Features
 
-vendor_boot test recovery 
+!!!test!!! vendor_boot recovery 
 
 at work
 

@@ -17,7 +17,6 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
-
 FDEVICE="lisa"
 #set -o xtrace
 
@@ -36,15 +35,19 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-    export OF_USE_GREEN_LED=0
-    export FOX_ENABLE_APP_MANAGER=1
-    export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
    	export TW_DEFAULT_LANGUAGE="en"
 	export LC_ALL="C"
  	export ALLOW_MISSING_DEPENDENCIES=true
 	export OF_VIRTUAL_AB_DEVICE=1
+	export OF_AB_DEVICE=1
 	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
+	export OF_USE_GREEN_LED=0
+	export OF_FBE_METADATA_MOUNT_IGNORE=1
+    export FOX_ENABLE_APP_MANAGER=1
+    export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
+ 	export ALLOW_MISSING_DEPENDENCIES=true
+	export OF_VIRTUAL_AB_DEVICE=1
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
 	export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
@@ -79,6 +82,13 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
 	# full size
 	export OF_DYNAMIC_FULL_SIZE=9126805504
+
+	# R11.1 Settings
+	export FOX_VERSION="R12.1"
+	export OF_MAINTAINER="dkpost3"
+	export FOX_BUILD_TYPE="Beta"
+	export FOX_VARIANT="vBaR"
+	export FOX_RESET_SETTINGS="disabled"
 
 	# vendor_boot-as-recovery
 	if [ "$OF_VENDOR_BOOT_RECOVERY" = "1" ]; then

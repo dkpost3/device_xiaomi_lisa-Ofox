@@ -1,0 +1,14 @@
+ro.product.device=lisa
+
+# Battery Property
+ro.charger.enable_suspend=1
+
+# other stuff
+persist.sys.isUsbOtgEnabled=true
+ro.crypto.allow_encrypt_override=true
+
+# USB
+vendor.usb.use_ffs_mtp=1
+
+#
+
